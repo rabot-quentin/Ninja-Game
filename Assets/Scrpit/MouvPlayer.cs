@@ -9,7 +9,8 @@ public class MouvPlayer : MonoBehaviour
    // public float gravity ;
    
 
-    public CharacterController controller; 
+    public CharacterController controller;
+    public Rigidbody rb; 
 
    
     void Start()
@@ -27,7 +28,7 @@ public class MouvPlayer : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, 0f , vertical).normalized;
         Vector3 Vecjump = new Vector3(0f, jump, 0f).normalized;
 
-        direction.y -= gravity * Time.deltaTime;
+       // direction.y -= gravity * Time.deltaTime;
 
        
             if ((direction.magnitude >= 0.1f)) // deplacement joueur 
@@ -42,8 +43,14 @@ public class MouvPlayer : MonoBehaviour
         {            
            controller.Move(Vecjump * Time.deltaTime * jumpForce); 
         }
-        Vector3 graviter = new Vector3(0, -9.81f, 0);
-        flot graviterMultiplier = 10f; 
+        Vector3 gravity = new Vector3(0, -9.81f, 0);
+        float graviterMultiplier = 10f;
+        gravity *= graviterMultiplier; 
+
+        if(rb.velocity.y < 0 )
+        {
+            rb.AddForce(gravity); 
+        }
        
 
     }
