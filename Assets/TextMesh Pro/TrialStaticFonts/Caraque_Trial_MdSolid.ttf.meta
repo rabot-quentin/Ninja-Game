@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 0eac7cdaecaa09f48ab116e1393161ae
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Caraque Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c8825f5a1f2613e478faf27c6f61a21a, type: 3}
+  - {fileID: 12800000, guid: 33a0ad8ce4962b047bcb250a07fc1aa2, type: 3}
+  - {fileID: 12800000, guid: 5d8df89e0147e09409d5501bc52eb9b4, type: 3}
+  - {fileID: 12800000, guid: 4d7d2f524963022489e45b5580bf3035, type: 3}
+  - {fileID: 12800000, guid: 254f408ae0fc87d4087758e72ba68afd, type: 3}
+  - {fileID: 12800000, guid: e0cbe6a54a95bf340a42f62d3a65bfb0, type: 3}
+  - {fileID: 12800000, guid: a487b6f2873204445ae10cda12341b7c, type: 3}
+  - {fileID: 12800000, guid: 7236b05114f7dd5418733df73e00f9cc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
