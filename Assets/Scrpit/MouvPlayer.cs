@@ -7,16 +7,8 @@ public class MouvPlayer : MonoBehaviour
     private float gravity ;
     public float gravityForce; 
     public CharacterController controller;
-    public int speedRotation;
-    public Animator AnimNinja;
-
-    [SerializeField]
-    private Vector3 moveDirection;
-
-    private void Start()
-    {
-        
-    }
+    
+    public Animator AnimNinja;    
 
     void Update()
     {
@@ -25,15 +17,10 @@ public class MouvPlayer : MonoBehaviour
         float jump = Input.GetAxis("Jump");
 
         Vector3 direction = new Vector3(horizontal, jump, vertical).normalized;
-        Vector3 Vecjump = new Vector3(0f, jump, 0f);
+       
 
 
-        if (direction.magnitude >= 0.1f) // deplacement joueur 
-        {
-            float targetAngle = Mathf.Atan2(horizontal, vertical) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, targetAngle, 0);
-            controller.Move(direction * Time.deltaTime * speed);
-        }
+        
 
 
         gravity -= gravityForce * Time.deltaTime;
@@ -41,13 +28,18 @@ public class MouvPlayer : MonoBehaviour
 
         if ((controller.isGrounded))
         {
+            if (direction.magnitude >= 0.1f) // deplacement joueur 
+            {
+                float targetAngle = Mathf.Atan2(horizontal, vertical) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, targetAngle, 0);
+                controller.Move(direction * Time.deltaTime * speed);
+            }
             gravity = 0;
             if (Input.GetButton("Jump"))
             {
-
                 AnimNinja.SetTrigger("Jump");
             }
-            // controller.Move(Vecjump * Time.deltaTime * jumpForce);
+            
 
         }
         
