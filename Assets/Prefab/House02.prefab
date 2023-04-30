@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6631381799031939398}
   m_Layer: 0
-  m_Name: Maison
+  m_Name: House02
   m_TagString: Maison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,109 +29,9 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7483638111821393279}
-  - {fileID: 5326164283225089128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5647777056306250627
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6631381799031939398}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 813f663492966704fb02f2133f5f34e3,
-        type: 3}
-      propertyPath: m_Name
-      value: house_green
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 813f663492966704fb02f2133f5f34e3, type: 3}
---- !u!1 &4801266694669565650 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 813f663492966704fb02f2133f5f34e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5647777056306250627}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &4869418690199519141
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4801266694669565650}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.7309842, y: 2.7970455, z: 2.8415415}
-  m_Center: {x: 0, y: -0.014572863, z: 1.4207708}
---- !u!4 &5326164283225089128 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 813f663492966704fb02f2133f5f34e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5647777056306250627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6940469560567728788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,6 +118,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6940469560567728788}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8550202648268943984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823009404269115333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.14, y: 3.44, z: 2.8415415}
+  m_Center: {x: -0.008660257, y: -0.01, z: 1.4207706}
 --- !u!114 &2597975854268684118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,20 +147,8 @@ MonoBehaviour:
   VictoireValid: 50
   CheckVictoire: 0
   maisonColl: {fileID: 8550202648268943984}
-  maison: {fileID: 4801266694669565650}
+  maison: {fileID: 0}
   maisonMate: {fileID: 2100000, guid: 2776bf0fce906ba40992d1a050537ad2, type: 2}
   maisonValide: 0
   manager: {fileID: 19475126392079468, guid: 61a071a0c120b7d4c93156b0af727f0b, type: 3}
---- !u!65 &8550202648268943984
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7823009404269115333}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.703157, y: 3.87336, z: 2.8415415}
-  m_Center: {x: -0.008660257, y: -0.11015165, z: 1.4207706}
+  AnimNinja: {fileID: 0}
