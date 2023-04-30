@@ -1,6 +1,6 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Victoire : MonoBehaviour
@@ -10,7 +10,11 @@ public class Victoire : MonoBehaviour
 
     public string Victoir;
 
-    public bool CheckVictoire; 
+    public bool CheckVictoire;
+
+   public GameObject[] victoires ;
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,18 +32,21 @@ public class Victoire : MonoBehaviour
     }
     private void Update()
     {
-        if(CheckVictoire == true)
+        switch (CheckVictoire)
         {
-            TimerVictoire += 1;            
-        }else if(CheckVictoire == false)
-        {
-            TimerVictoire = 0; 
-        }
+            case true:
+                TimerVictoire += 1;
+                break;
+            case false:
+                TimerVictoire = 0;
+                break;
+        }        
 
         if (TimerVictoire >= VictoireValid)
         {
             SceneManager.LoadScene(Victoir);
         }
+        
     }
 
 }

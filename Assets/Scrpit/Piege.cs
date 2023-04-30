@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Piege : MonoBehaviour
@@ -18,7 +16,6 @@ public class Piege : MonoBehaviour
     {
         playerCollider = false;
         timeStartLifePlaque = timeLifePlaque; 
-
     }
 
    
@@ -33,13 +30,11 @@ public class Piege : MonoBehaviour
                 timeLifePlaque = timeStartLifePlaque;
                 break; 
         }
+
         if(timeLifePlaque <= 0)
         {
             Destroy(this.gameObject); 
-        }
-        
-
-            
+        }            
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -55,7 +50,4 @@ public class Piege : MonoBehaviour
             playerCollider = false;
         }
     }
-    
-
-
 }
