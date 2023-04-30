@@ -7,15 +7,12 @@ public class MouvPlayer : MonoBehaviour
     private float gravity ;
     public float gravityForce; 
     public CharacterController controller;
-    public int speedRotation;
+   
 
     [SerializeField]
     private Vector3 moveDirection;
 
-    private void Start()
-    {
-        
-    }
+
 
     void Update()
     {
@@ -40,12 +37,7 @@ public class MouvPlayer : MonoBehaviour
 
         if ((controller.isGrounded))
         {
-            gravity = 0; 
-            if(Input.GetButton("Jump"))
-            {
-                speed = speed * jumpForce; 
-            }
-           // controller.Move(Vecjump * Time.deltaTime * jumpForce);
+            gravity = 0;           
 
         }
     }
