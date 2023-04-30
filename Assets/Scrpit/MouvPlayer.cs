@@ -7,12 +7,16 @@ public class MouvPlayer : MonoBehaviour
     private float gravity ;
     public float gravityForce; 
     public CharacterController controller;
-   
+    public int speedRotation;
+    public Animator AnimNinja;
 
     [SerializeField]
     private Vector3 moveDirection;
 
-
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -37,8 +41,23 @@ public class MouvPlayer : MonoBehaviour
 
         if ((controller.isGrounded))
         {
-            gravity = 0;           
+            gravity = 0;
+            if (Input.GetButton("Jump"))
+            {
 
+                AnimNinja.SetTrigger("Jump");
+            }
+            // controller.Move(Vecjump * Time.deltaTime * jumpForce);
+
+        }
+        
+        if (Input.GetButton("Horizontal")||Input.GetButton("Vertical"))
+        {
+            AnimNinja.SetBool("Run", true);
+        }
+        else
+        {
+            AnimNinja.SetBool("Run", false);
         }
     }
 }
