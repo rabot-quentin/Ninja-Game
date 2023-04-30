@@ -15,7 +15,9 @@ public class Victoire : MonoBehaviour
     public Material maisonMate; 
     
     public int maisonValide = 0;
-    public GameManager manager; 
+    public GameManager manager;
+
+    public Animator AnimNinja;
     
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +25,7 @@ public class Victoire : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             CheckVictoire = true;
+            AnimNinja.SetTrigger("Victory");
         }
     }
     private void OnTriggerExit(Collider other)

@@ -11,6 +11,7 @@ public class mouvPlayer2 : MonoBehaviour
     public float gravity; // le parametre qui va permet au joueur de rester d'avoir un graviter qui s'applique sur lui 
     private Vector3 moveDirection = Vector3.zero;
     CharacterController Cc;
+    public Animator AnimNinja;
 
     public bool CanMove { get; internal set; }
 
@@ -34,6 +35,7 @@ public class mouvPlayer2 : MonoBehaviour
                 if (Input.GetButtonDown("Jump")) // si le joueur veux sauter 
                 {
                     moveDirection.y = jumpSpeed;
+                    AnimNinja.SetTrigger("Jump");
                 }
             }
 
@@ -42,6 +44,15 @@ public class mouvPlayer2 : MonoBehaviour
             transform.Rotate(Vector3.up * Input.GetAxis("Horizontal") * Time.deltaTime * speed * speedRotation);//* se qui permet au joueur de tourner avec les toutche Q et D 
             Cc.Move(moveDirection * Time.deltaTime);
             CanMove = true;
+
+            if (Input.GetButtonDown("Vertical")||Input.GetButtonDown("Horizontal"))
+            {
+                AnimNinja.SetBool("Run", true);
+            }
+            else
+            {
+                AnimNinja.SetBool("Run", false);
+            }
         }
 
 
