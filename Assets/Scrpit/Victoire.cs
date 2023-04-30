@@ -12,14 +12,16 @@ public class Victoire : MonoBehaviour
 
     public Collider maisonColl ;
     public GameObject maison;
-    public Material maisonMate; 
-    
+        
     public int maisonValide = 0;
     public GameManager manager;
 
     public Animator AnimNinja;
-    
 
+    public void Start()
+    {
+        maison.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
