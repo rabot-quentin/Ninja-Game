@@ -48,8 +48,8 @@ public class Victoire : MonoBehaviour
         if (TimerVictoire >= VictoireValid)
         {
             manager.maisonValide += 1;
-            Destroy(maisonColl);
-            maison.GetComponent<MeshRenderer>().material = maisonMate;
+            this.gameObject.SetActive(false);
+            maison.SetActive(true);            
             CheckVictoire = false;
             TimerVictoire = 0;
         }
