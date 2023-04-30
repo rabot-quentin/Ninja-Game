@@ -28,18 +28,17 @@ public class MouvPlayer : MonoBehaviour
 
         if ((controller.isGrounded))
         {
+            gravity = 0;
             if (direction.magnitude >= 0.1f) // deplacement joueur 
             {
                 float targetAngle = Mathf.Atan2(horizontal, vertical) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(0, targetAngle, 0);
                 controller.Move(direction * Time.deltaTime * speed);
-            }
-            gravity = 0;
+            }           
             if (Input.GetButton("Jump"))
             {
                 AnimNinja.SetTrigger("Jump");
-            }
-            
+            }            
 
         }
         
