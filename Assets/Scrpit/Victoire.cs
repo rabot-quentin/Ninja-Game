@@ -6,30 +6,33 @@ using UnityEngine.SceneManagement;
 public class Victoire : MonoBehaviour
 {
     public int TimerVictoire;
-    public int VictoireValid;
-
-    public string Victoir;
+    public int VictoireValid;  
 
     public bool CheckVictoire;
 
-   public GameObject[] victoires ;
-
+    public Collider maisonColl ;
+    public GameObject maison;
+    public Material maisonMate; 
+    
+    public int maisonValide = 0;
+    public GameManager manager; 
     
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Maison")
+        if (other.transform.tag == "Player")
         {
             CheckVictoire = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "Maison")
+        if (other.transform.tag == "Player")
         {
             CheckVictoire = false;
         }
     }
+    
     private void Update()
     {
         switch (CheckVictoire)
@@ -44,8 +47,14 @@ public class Victoire : MonoBehaviour
 
         if (TimerVictoire >= VictoireValid)
         {
-            SceneManager.LoadScene(Victoir);
+            manager.maisonValide += 1;
+            Destroy(maisonColl);
+            maison.GetComponent<MeshRenderer>().material = maisonMate;
+            CheckVictoire = false;
+            TimerVictoire = 0;
         }
+       
+        
         
     }
 

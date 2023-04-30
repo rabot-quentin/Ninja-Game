@@ -11,9 +11,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
-    public string ScenGameOver; 
+    public string ScenGameOver;
+    public string Victoir;
 
-
+   
+    public int nombreMaison;
+    public int maisonValide; 
     
 
     
@@ -28,6 +31,10 @@ public class GameManager : MonoBehaviour
             time = 0;   
             Destroy(player);
             SceneManager.LoadScene(ScenGameOver);
+        }
+        if(nombreMaison == maisonValide)
+        {
+            SceneManager.LoadScene(+1);
         }
     }
    
