@@ -546,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu: Menu
   Option: Option
-  Jeux: Jeu
+  Jeux: Niveau1
 --- !u!4 &960465692
 Transform:
   m_ObjectHideFlags: 0

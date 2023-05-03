@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Piege : MonoBehaviour
 {
-    public Material fullLife;
+    
     public float timeLifePlaque;
     private float timeStartLifePlaque; 
     public GameObject plaque;
